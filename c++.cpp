@@ -5674,7 +5674,22 @@ so nguyen lon chia het cho 8 hoac 25
 
 
 so nhi phan lon chia het cho 5
-
+ // tran so
+ int check(char c[]) {
+	int n = strlen(c);
+	if (n < 3)return 0;
+	long long temp = (pow(2, strlen(c) - 1));
+	long long sum = 0;
+	for (int i = 0; i < n; i++) {
+		sum += (c[i] - '0') * temp;
+		temp /= 2;
+	}
+	if (sum % 5 == 0) {
+		return 1;
+	}
+	return 0;
+ }
+// khong tran so
  int solution(char c[]);
  int main(){
      int testcase;
